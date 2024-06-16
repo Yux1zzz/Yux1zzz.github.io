@@ -155,7 +155,7 @@
 
 <p>创建游戏主类<em>TetrisGame</em>，在其中<em>main</em>函数内创建<em>Tetris</em>游戏对象</p>
 <p>运行成果：</p>
-<p><img src="https://github.com/Yux1zzz/Yux1zzz.github.io/blob/master/img/tetris_1.png"></p>
+<p><img src="https://github.com/Yux1zzz/images/blob/main/tetris_1.png"></p>
 <h3 id="二丶创建游戏界面"><a href="#二丶创建游戏界面" class="headerlink" title="二丶创建游戏界面"></a>二丶创建游戏界面</h3><p>定义游戏中方块的行数（26）与列数（12）作为常量</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">NUMBER_Y</span> <span class="operator">=</span> <span class="number">26</span>;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">NUMBER_X</span> <span class="operator">=</span> <span class="number">12</span>;</span><br></pre></td></tr></table></figure>
 
@@ -171,7 +171,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="title function_">Tetris</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="comment">//在构造方法里调用初始化界面</span></span><br><span class="line">    initPanel();</span><br><span class="line">    <span class="comment">//在构造方法里调用初始化窗口</span></span><br><span class="line">    initWindow();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>运行成果：<del>（nnd，有点晃眼睛）</del></p>
-<p><img src="https://github.com/Yux1zzz/Yux1zzz.github.io/blob/master/img/tetris_2.png"></p>
+<p><img src="https://github.com/Yux1zzz/images/blob/main/tetris_2.png"></p>
 <h3 id="三丶初始化游戏的说明面板"><a href="#三丶初始化游戏的说明面板" class="headerlink" title="三丶初始化游戏的说明面板"></a>三丶初始化游戏的说明面板</h3><p>添加游戏状态<em>gameState</em>与游戏分数<em>gamePoint</em>的变量并初始化</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//游戏状态</span></span><br><span class="line">JLabel gameState;</span><br><span class="line"><span class="comment">//游戏分数</span></span><br><span class="line">JLabel gamePoint;</span><br></pre></td></tr></table></figure>
 
@@ -183,7 +183,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="title function_">Tetris</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="comment">//在构造方法里调用初始化界面</span></span><br><span class="line">    initPanel();</span><br><span class="line">    <span class="comment">//在构造方法里调用初始化说明面板</span></span><br><span class="line">    initExplainPanel();</span><br><span class="line">    <span class="comment">//在构造方法里调用初始化窗口</span></span><br><span class="line">    initWindow();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>运行效果：<del>（换了颜色，减轻丑的程度）</del></p>
-<p><img src="https://github.com/Yux1zzz/Yux1zzz.github.io/blob/master/img/tetris_3.png"></p>
+<p><img src="https://github.com/Yux1zzz/images/blob/main/tetris_3.png"></p>
 <h2 id="开发源码："><a href="#开发源码：" class="headerlink" title="开发源码："></a>开发源码：</h2>
       
 
