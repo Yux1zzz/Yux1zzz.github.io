@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.2.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yux1.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="数据结构与算法数据结构数据结构 包括 线性结构 与 非线性结构 线性结构分为顺序存储结构（顺序表）与链式存储结构（链表） 线性结构：数组、队列、链表、栈 非线性结构：二维数组、多维数组、广义表、树结构、图结构 稀疏数组SparseArray当一个数组中大部分元素都为0，或者是同一个元素时，可以使用稀疏数组来保存该数组。 处理思路：1.记录数组一共有几行几列，有多少个不同的值 2.把具有不同值的元素">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Yux1的个人博客">
+<meta property="og:url" content="http://yux1.github.io/year/06/21/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/index.html">
+<meta property="og:site_name" content="Yux1的个人博客">
+<meta property="og:description" content="数据结构与算法数据结构数据结构 包括 线性结构 与 非线性结构 线性结构分为顺序存储结构（顺序表）与链式存储结构（链表） 线性结构：数组、队列、链表、栈 非线性结构：二维数组、多维数组、广义表、树结构、图结构 稀疏数组SparseArray当一个数组中大部分元素都为0，或者是同一个元素时，可以使用稀疏数组来保存该数组。 处理思路：1.记录数组一共有几行几列，有多少个不同的值 2.把具有不同值的元素">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-06-21T13:45:44.437Z">
+<meta property="article:modified_time" content="2024-06-21T18:10:25.727Z">
+<meta property="article:author" content="Yux1">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://yux1.github.io/year/06/21/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://yux1.github.io/year/06/21/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/","path":"year/06/21/数据结构与算法/","title":""}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title> | Yux1的个人博客</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Yux1的个人博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">数据结构与算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="nav-number">1.1.</span> <span class="nav-text">数据结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84SparseArray"><span class="nav-number">1.1.1.</span> <span class="nav-text">稀疏数组SparseArray</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E6%80%9D%E8%B7%AF%EF%BC%9A"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">处理思路：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E8%BD%AC%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">二维数组转稀疏数组的方法：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84%E8%BD%AC%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="nav-number">1.1.1.3.</span> <span class="nav-text">稀疏数组转二维数组的方法：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B%EF%BC%9A"><span class="nav-number">1.1.1.4.</span> <span class="nav-text">示例：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%98%9F%E5%88%97Queue"><span class="nav-number">1.1.2.</span> <span class="nav-text">队列Queue</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E7%BB%84%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97%EF%BC%9A"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">数组实现队列：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B%EF%BC%9A-1"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">示例：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E7%BB%84%E5%AE%9E%E7%8E%B0%E7%8E%AF%E5%BD%A2%E9%98%9F%E5%88%97%EF%BC%9A"><span class="nav-number">1.1.2.3.</span> <span class="nav-text">数组实现环形队列：</span></a></li></ol></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Yux1</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yux1.github.io/year/06/21/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yux1">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yux1的个人博客">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Yux1的个人博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2024-06-21 21:45:44" itemprop="dateCreated datePublished" datetime="2024-06-21T21:45:44+08:00">2024-06-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2024-06-22 02:10:25" itemprop="dateModified" datetime="2024-06-22T02:10:25+08:00">2024-06-22</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="数据结构与算法"><a href="#数据结构与算法" class="headerlink" title="数据结构与算法"></a>数据结构与算法</h1><h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><p><strong>数据结构</strong> 包括 <strong>线性结构</strong> 与 <strong>非线性结构</strong></p>
+<p><strong>线性结构</strong>分为<strong>顺序存储结构</strong>（顺序表）与<strong>链式存储结构</strong>（链表）</p>
+<p><strong>线性结构</strong>：数组、队列、链表、栈</p>
+<p><strong>非线性结构</strong>：二维数组、多维数组、广义表、树结构、图结构</p>
+<h3 id="稀疏数组SparseArray"><a href="#稀疏数组SparseArray" class="headerlink" title="稀疏数组SparseArray"></a>稀疏数组SparseArray</h3><p>当一个数组中大部分元素都为0，或者是同一个元素时，可以使用稀疏数组来保存该数组。</p>
+<h4 id="处理思路："><a href="#处理思路：" class="headerlink" title="处理思路："></a>处理思路：</h4><p>1.记录数组一共有几行几列，有多少个不同的值</p>
+<p>2.把具有不同值的元素的行、列及值记录在一个小规模的数组中</p>
+<h4 id="二维数组转稀疏数组的方法："><a href="#二维数组转稀疏数组的方法：" class="headerlink" title="二维数组转稀疏数组的方法："></a><strong>二维数组</strong>转<strong>稀疏数组</strong>的方法：</h4><p>1.遍历原始的二维数组，得到有效数据的个数<em>sum</em></p>
+<p>2.根据sum创建稀疏数组<code>int[sum + 1][3] sparseArray</code></p>
+<p>3.将原数组中的有效数据转存入稀疏数组</p>
+<h4 id="稀疏数组转二维数组的方法："><a href="#稀疏数组转二维数组的方法：" class="headerlink" title="稀疏数组转二维数组的方法："></a><strong>稀疏数组</strong>转<strong>二维数组</strong>的方法：</h4><p>1.读取稀疏数组的第一行，以此创建新的二维数组</p>
+<p>2.读取稀疏数组后几行的数据，并赋值给二维数组</p>
+<h4 id="示例："><a href="#示例：" class="headerlink" title="示例："></a><strong>示例：</strong></h4><details>
+    <summary>点我展开完整代码</summary>
+    <pre><code>
+    public class SparseArray &#123;
+    public static void main(String[] args)&#123;
+        int[][] intArray_1;
+        intArray_1 = new int[][]
+                &#123;&#123;0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0&#125;,
+                &#123;0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0&#125;,
+                &#123;0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0&#125;,
+                &#123;0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0&#125;,
+                &#123;0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0&#125;,
+                &#123;0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0&#125;,
+                &#123;0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0&#125;,
+                &#123;0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0&#125;,
+                &#123;0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0&#125;,
+                &#123;0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0&#125;,
+                &#123;0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0&#125;&#125;;
+        printArray(intArray_1);
+        int[][] sparseArray;
+        sparseArray = intToSparse(intArray_1);
+        printArray(sparseArray);
+        int[][] intArray_2;
+        intArray_2 = sparseToInt(sparseArray);
+        printArray(intArray_2);
+    &#125;
+    public static int[][] intToSparse(int[][] intArray)&#123;
+        int sum = 0;
+        for (int i = 0; i < intArray.length; i++)&#123;
+            for (int j = 0; j < intArray[i].length; j++)&#123;
+                if (intArray[i][j] != 0)&#123;
+                    sum++;
+                &#125;
+            &#125;
+        &#125;
+        int[][] sparseArray = new int[sum + 1][3];
+        sparseArray[0][0] = intArray.length;
+        sparseArray[0][1] = intArray[0].length;
+        sparseArray[0][2] = sum;
+        int count = 1;
+        for (int i = 0; i < intArray.length; i++)&#123;
+            for (int j = 0; j < intArray[i].length; j++)&#123;
+                if (intArray[i][j] != 0)&#123;
+                    sparseArray[count][0] = i;
+                    sparseArray[count][1] = j;
+                    sparseArray[count][2] = intArray[i][j];
+                    count++;
+                &#125;
+            &#125;
+        &#125;
+        return sparseArray;
+    &#125;
+    public static int[][] sparseToInt(int[][] sparseArray)&#123;
+        int[][] intArray;
+        intArray = new int[sparseArray[0][0]][sparseArray[0][1]];
+        for (int i = 0; i < intArray.length; i++)&#123;
+            Arrays.fill(intArray[i], 0);
+        &#125;
+        for (int i = 1; i < sparseArray.length; i++)&#123;
+            intArray[sparseArray[i][0]][sparseArray[i][1]] = sparseArray[i][2];
+        &#125;
+        return intArray;
+    &#125;
+    public static void printArray(int[][] array)&#123;
+        for (int i = 0; i < array.length; i++)&#123;
+            for (int j = 0; j < array[i].length; j++)&#123;
+                System.out.print(array[i][j] + "  ");
+            &#125;
+            System.out.println();
+        &#125;
+    &#125;
+&#125;
+    </code></pre>
+</details>
+
+
+
+<h3 id="队列Queue"><a href="#队列Queue" class="headerlink" title="队列Queue"></a>队列Queue</h3><ul>
+<li><strong>队列</strong>是一个有序列表，可以用<strong>数组</strong>或是<strong>列表</strong>来实现</li>
+<li>遵循<u><strong>先进先出</strong></u>的原则</li>
+</ul>
+<h4 id="数组实现队列："><a href="#数组实现队列：" class="headerlink" title="数组实现队列："></a>数组实现队列：</h4><p>因为队列的输出与出入分别从前后端进行处理，所以需要两个变量<em>front</em>及<em>rear</em>分别记录队列前后端的下标，<em>front</em>随数据输出而改变，而<em>rear</em>随数据输入而改变</p>
+<h4 id="示例：-1"><a href="#示例：-1" class="headerlink" title="示例："></a>示例：</h4><details>
+    <summary>点我展开完整代码</summary>
+    <pre><code>
+    class QueueArray {
+    //队列的最大元素个数
+    private int maxSize;
+    //用于保存队列数据的数组
+    private int[] queueArray;
+    //队列前后端的下标
+    private int front;
+    private int rear;
+    //初始化
+    public QueueArray(int maxSize){
+        this.maxSize = maxSize;
+        this.queueArray = new int[maxSize];
+        this.front = -1;  //指向队列头的前一个数据
+        this.rear = -1;  //指向队列尾的数据
+    }
+    //添加数据
+    public void addQueue(int num){
+        if (!isFull()){
+            queueArray[rear + 1] = num;
+            rear++;
+            System.out.println("已将数据" + num + "添加到队列中，位置为" + rear);
+        }
+        else {
+            System.out.println("队列已满，不能再添加数据");
+        }
+    }
+    //获取数据
+    public int getQueue(){
+        if (!isEmpty()){
+            front++;
+            return queueArray[front];
+        }
+        else {
+            throw new RuntimeException("队列为空，不能取出数据");
+        }
+    }
+    //显示队列的所有数据
+    public void showQueue(){
+        if (!isEmpty()){
+            for (int i = 0; i < queueArray.length; i++){
+                System.out.print(queueArray[i] + "  ");
+            }
+        }
+        else {
+            System.out.println("队列空，无法读取数据");
+        }
+    }
+    //显示队列的头部数据
+    public int showHeadQueue(){
+        if (!isEmpty()){
+            return queueArray[front + 1];
+        }
+        else {
+            throw new RuntimeException("队列为空，无法获取数据");
+        }
+    }
+    //判断队列是否已满
+    public boolean isFull(){
+        return rear == maxSize - 1;
+    }
+    //判断队列是否为空
+    public boolean isEmpty(){
+        return front == rear;
+    }
+}
+    <code><pre>
+<details>
+
+
+
+<p><strong>存在的问题</strong>：因为数组只能使用一次，所以队列满后即便取出前端数据也不能再添加数据</p>
+<p><strong>改进方法</strong>：利用数组实现环形队列</p>
+<h4 id="数组实现环形队列："><a href="#数组实现环形队列：" class="headerlink" title="数组实现环形队列："></a>数组实现环形队列：</h4>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/year/06/19/MySQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="prev" title="">
+                  <i class="fa fa-angle-left"></i> 
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Yux1</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
