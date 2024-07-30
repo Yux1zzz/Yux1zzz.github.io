@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.2.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/avatar.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/avatar.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/avatar.jpg">
+  <link rel="mask-icon" href="/images/avatar.jpg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yux1.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Unity学习笔记并不完全的Unity学习笔记~~ 摘录自Unity中文课堂 (u3d.cn)  – Joker独游计划合集">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Unity学习笔记">
+<meta property="og:url" content="http://yux1.github.io/year/07/25/Unity%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="Yux1的个人博客">
+<meta property="og:description" content="Unity学习笔记并不完全的Unity学习笔记~~ 摘录自Unity中文课堂 (u3d.cn)  – Joker独游计划合集">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-07-24T17:45:39.000Z">
+<meta property="article:modified_time" content="2024-07-30T02:22:18.817Z">
+<meta property="article:author" content="Yux1">
+<meta property="article:tag" content="学习笔记">
+<meta property="article:tag" content="Unity">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://yux1.github.io/year/07/25/Unity%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://yux1.github.io/year/07/25/Unity%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/","path":"year/07/25/Unity学习笔记/","title":"Unity学习笔记"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Unity学习笔记 | Yux1的个人博客</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+  <a target="_blank" rel="noopener" href="https://yux1zzz.github.io" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Yux1的个人博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Unity%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0"><span class="nav-text">Unity学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Unity%E4%B8%BB%E8%A6%81%E6%A1%86%E6%9E%B6"><span class="nav-text">Unity主要框架</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Scene%E5%9C%BA%E6%99%AF"><span class="nav-text">Scene场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GameObject%E6%B8%B8%E6%88%8F%E7%89%A9%E4%BD%93"><span class="nav-text">GameObject游戏物体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Component%E7%BB%84%E4%BB%B6"><span class="nav-text">Component组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Project%E7%AA%97%E5%8F%A3"><span class="nav-text">Project窗口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Inspect%E7%AA%97%E5%8F%A3"><span class="nav-text">Inspect窗口</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GameObject"><span class="nav-text">GameObject</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E5%B1%9E%E6%80%A7"><span class="nav-text">主要属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E8%A1%8C%E4%B8%BA"><span class="nav-text">主要行为</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%84%E4%BB%B6%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="nav-text">组件的生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E9%94%AE%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%87%BD%E6%95%B0"><span class="nav-text">关键生命周期函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Unity%E8%BE%93%E5%85%A5%E7%B3%BB%E7%BB%9F"><span class="nav-text">Unity输入系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%91%E5%90%AC%E9%94%AE%E7%9B%98%E8%BE%93%E5%85%A5"><span class="nav-text">监听键盘输入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%91%E5%90%AC%E9%BC%A0%E6%A0%87%E8%BE%93%E5%85%A5"><span class="nav-text">监听鼠标输入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#InputManager"><span class="nav-text">InputManager</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Unity2D%E5%8A%A8%E7%94%BB"><span class="nav-text">Unity2D动画</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Animator%EF%BC%9A%E5%8A%A8%E7%94%BB%E7%BB%84%E4%BB%B6%EF%BC%88%E7%BB%84%E4%BB%B6%EF%BC%89"><span class="nav-text">Animator：动画组件（组件）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AnimatorController%EF%BC%9A%E5%8A%A8%E7%94%BB%E6%8E%A7%E5%88%B6%E5%99%A8%EF%BC%88%E6%96%87%E4%BB%B6%EF%BC%89"><span class="nav-text">AnimatorController：动画控制器（文件）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AniamtionClip%EF%BC%9A%E5%8A%A8%E7%94%BB%E7%89%87%E6%AE%B5%EF%BC%88%E6%96%87%E4%BB%B6%EF%BC%89"><span class="nav-text">AniamtionClip：动画片段（文件）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A8%E7%94%BB%E4%BA%8B%E4%BB%B6"><span class="nav-text">动画事件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E7%BB%84%E4%BB%B6"><span class="nav-text">常见组件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Transform%E7%BB%84%E4%BB%B6"><span class="nav-text">Transform组件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2D%E7%89%A9%E7%90%86%E7%B3%BB%E7%BB%9F"><span class="nav-text">2D物理系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A2%B0%E6%92%9E%E4%BD%93"><span class="nav-text">碰撞体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9A%E4%BD%93"><span class="nav-text">刚体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6"><span class="nav-text">事件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E5%B1%9E%E6%80%A7-1"><span class="nav-text">主要属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E8%A1%8C%E4%B8%BA-1"><span class="nav-text">主要行为</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SpriteRender"><span class="nav-text">SpriteRender</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Sprite"><span class="nav-text">Sprite</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9F%B3%E9%A2%91%E7%B3%BB%E7%BB%9F"><span class="nav-text">音频系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#AudioClip"><span class="nav-text">AudioClip</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AudioListener"><span class="nav-text">AudioListener</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AudioSource"><span class="nav-text">AudioSource</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Yux1"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Yux1</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Yux1zzz" title="Github → https:&#x2F;&#x2F;github.com&#x2F;Yux1zzz" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>Github</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/361374815?spm_id_from=333.1007.0.0" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;361374815?spm_id_from&#x3D;333.1007.0.0" rel="noopener me" target="_blank"><i class="fab fa-bilibili fa-fw"></i>Bilibili</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://frite30.github.io/" title="https:&#x2F;&#x2F;frite30.github.io&#x2F;" rel="noopener" target="_blank">Frite's Blog</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yux1.github.io/year/07/25/Unity%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Yux1">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yux1的个人博客">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Unity学习笔记 | Yux1的个人博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Unity学习笔记
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-07-25 01:45:39" itemprop="dateCreated datePublished" datetime="2024-07-25T01:45:39+08:00">2024-07-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-07-30 10:22:18" itemprop="dateModified" datetime="2024-07-30T10:22:18+08:00">2024-07-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Unity/" itemprop="url" rel="index"><span itemprop="name">Unity</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="Unity学习笔记"><a href="#Unity学习笔记" class="headerlink" title="Unity学习笔记"></a>Unity学习笔记</h1><p>并不完全的Unity学习笔记~~</p>
+<p>摘录自<a target="_blank" rel="noopener" href="https://learn.u3d.cn/bundle/Joker-indie-game">Unity中文课堂 (u3d.cn)  – Joker独游计划合集</a></p>
+<span id="more"></span>
+
+<h2 id="Unity主要框架"><a href="#Unity主要框架" class="headerlink" title="Unity主要框架"></a>Unity主要框架</h2><h3 id="Scene场景"><a href="#Scene场景" class="headerlink" title="Scene场景"></a>Scene场景</h3><p>Scene记录游戏中各元素并显示，为.unity的配置文件。</p>
+<h3 id="GameObject游戏物体"><a href="#GameObject游戏物体" class="headerlink" title="GameObject游戏物体"></a>GameObject游戏物体</h3><p>场景中的一切都为游戏物体。</p>
+<p>游戏物体的编辑一般通过Hierarchy、Inspector面板。</p>
+<p>不同的组件赋予游戏对象不同的功能。</p>
+<h3 id="Component组件"><a href="#Component组件" class="headerlink" title="Component组件"></a>Component组件</h3><p>组件为一个或多个功能的容器。</p>
+<p>组件化设计有利于维护拓展，简化继承树。</p>
+<p>Unity中任务游戏物体都有Transform组件。</p>
+<h3 id="Project窗口"><a href="#Project窗口" class="headerlink" title="Project窗口"></a>Project窗口</h3><p>Project窗口是一个<strong>开发时使用</strong>的项目资源管理器，为文件夹结构。</p>
+<h3 id="Inspect窗口"><a href="#Inspect窗口" class="headerlink" title="Inspect窗口"></a>Inspect窗口</h3><p>可查看游戏物体的属性设置</p>
+<h2 id="GameObject"><a href="#GameObject" class="headerlink" title="GameObject"></a>GameObject</h2><p>任何物体身上都有一个gameObject属性，代表所在的GameObject。</p>
+<h3 id="主要属性"><a href="#主要属性" class="headerlink" title="主要属性"></a>主要属性</h3><ul>
+<li>name：名称</li>
+<li>tag：标签</li>
+<li>layer：层分类</li>
+</ul>
+<h3 id="主要行为"><a href="#主要行为" class="headerlink" title="主要行为"></a>主要行为</h3><ul>
+<li>SetActive：是否显示</li>
+<li>AddComponent：添加组件</li>
+<li>GetComponent：获取组件</li>
+<li>GetComponents：获取多个组件</li>
+<li>GetComponentInChildren：获取子物体上的组件</li>
+<li>GetComponentInParent：获取父物体上的组件</li>
+</ul>
+<h2 id="组件的生命周期"><a href="#组件的生命周期" class="headerlink" title="组件的生命周期"></a>组件的生命周期</h2><p>在Unity中生命周期指一个组件从创建到销般的所有阶段，这些阶段肯定要做一些事情，这些事情就是生命周期函数。注意：官方一般称为“事件函数”。</p>
+<h3 id="关键生命周期函数"><a href="#关键生命周期函数" class="headerlink" title="关键生命周期函数"></a>关键生命周期函数</h3><p>Awake(针对GameObject)：始终在任何 Start函救之前GameObject创建后调用此函数。</p>
+<p>OnEanble(针对自身)：在启用对象后立即调用此函数。</p>
+<p>Reset：调用 Reset 可以在脚本首次附加到对象时以及使用 <em>Reset</em> 命令时初始化脚本的属性。</p>
+<p>OnValidate：每当设置脚本的属性时都会调用 OnValidate，包括反序列化对象时。</p>
+<p>Start(针对自身)：仅当启用脚本实例后，才会在第一次帧更新之前调用 Start</p>
+<p>OnApplicationPause：在帧的结尾处调用此函数（在正常帧更新之间有效检测到暂停）。在调用OnApplicationPause之后，将发出一个额外帧，从而允许游戏显示图形来指示暂停状态。</p>
+<p>FixedUpdate：调用 FixedUpdate 的频度常常超过 Update。如果帧率很低，可以每帧调用该函数多次；如果帧率很高，可能在帧之间完全不调用该函数。在 FixedUpdate 之后将立即进行所有物理计算和更新。在 FixedUpdate 内应用运动计算时，无需将值乘以 Time.deltaTime。这是因为 FixedUpdate 的调用基于可靠的计时器（独立于帧率）。</p>
+<p>Update(针对自身)：每帧洞用一次 Update。这是用于帧更新的主要函数</p>
+<p>LateUpdate(针对自身)：在LateUpdate完成后执行一次</p>
+<p>OnDisable(针对自身)：被禁用或处于非活动状态时，调用此函数</p>
+<p>OnDestroy(针对GameObject)：对象存在的最后一帧完成所有顿更新之后，调用此函数(可能因为Destroy函教或在场景关闭时销数该对象)</p>
+<p>针对GameObject：指就算组件被禁用也能调用</p>
+<h2 id="Unity输入系统"><a href="#Unity输入系统" class="headerlink" title="Unity输入系统"></a>Unity输入系统</h2><h3 id="监听键盘输入"><a href="#监听键盘输入" class="headerlink" title="监听键盘输入"></a>监听键盘输入</h3><p>键盘的输入有三种状态：按下的瞬间、持续按下中、弹起的瞬间</p>
+<p>下方三个函数返回都是bool类型、参数都是KeyCode枚举类型</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input.GetkeyDown(KeyCode.A)</span><br><span class="line">Input.Getkey(KeyCode.A)</span><br><span class="line">Input.GetKeyUp(KeyCode.A)</span><br></pre></td></tr></table></figure>
+
+<h3 id="监听鼠标输入"><a href="#监听鼠标输入" class="headerlink" title="监听鼠标输入"></a>监听鼠标输入</h3><p>和键盘差不多，不过0是鼠标左键、1是鼠标右键、2是鼠标中键</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input.GetMouseButtonDown(<span class="number">0</span>);</span><br><span class="line">Input.GetMouseButton(<span class="number">0</span>);</span><br><span class="line">Input.GetMouseButtonUp(<span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="InputManager"><a href="#InputManager" class="headerlink" title="InputManager"></a>InputManager</h3><p>Unity提供了一种常见且方便的使用方式：</p>
+<p>大多游戏中键盘A和D，是控制玩家在水平方向上进行移动，这里提供一个函数：</p>
+<p>如果玩家按下A，函数的返回值会偏向-1</p>
+<p>如果玩家按下D，函数的返回值会偏向1</p>
+<p>如果玩家不按A和D，函数的返回值会偏向0</p>
+<p>为什么叫“偏向”，因为会缓动效果，比如按下A后，数值慢慢减到-1，如果不按，慢慢回到0，按下D，慢慢到D，刚好可以模拟出启动、惯性的效果</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input.GetAxis(<span class="string">&quot;Horizontal&quot;</span>);</span><br><span class="line">Input.GetAxisRaw(<span class="string">&quot;Horizontal&quot;</span>); <span class="comment">// 不进行缓动，只有三种可能 -1，0，1</span></span><br></pre></td></tr></table></figure>
+
+<p>“Horizontal”是在Project-&gt;InputManager中配置</p>
+<h2 id="Unity2D动画"><a href="#Unity2D动画" class="headerlink" title="Unity2D动画"></a>Unity2D动画</h2><h3 id="Animator：动画组件（组件）"><a href="#Animator：动画组件（组件）" class="headerlink" title="Animator：动画组件（组件）"></a>Animator：动画组件（组件）</h3><p>用来持有AnimatorController的组件，注意可以多个Aniamtor持有一份AnimatorController  </p>
+<h3 id="AnimatorController：动画控制器（文件）"><a href="#AnimatorController：动画控制器（文件）" class="headerlink" title="AnimatorController：动画控制器（文件）"></a>AnimatorController：动画控制器（文件）</h3><p>动画控制器相当于是一个配置文件，配置的是一个角色有那些动画，动画和动画之间如何跳转</p>
+<p>状态：当前角色处于的状态，状态会持有具体的AniamtionClip</p>
+<p>条件：动画之间的切换基于什么条件</p>
+<p>参数：条件基于参数来判断是否满足，满足则切换</p>
+<ul>
+<li>int、float、bool和代码中的类似</li>
+<li>Trigger：触发一次，bool相当于是一种状态，但是Trigger是一个一次性使用的条件</li>
+</ul>
+<p>Has Exit Time：即使条件满足也需要等待当前状态的播放完毕才能进行切换</p>
+<p>参数：提供给脚本去访问、修改的“值”，这些值变化则状态变化，则动画发生改变</p>
+<p>CrossFadeInFixedTime：此函数无视是否有条件（也就是不拉线也能强行切换动画状态）</p>
+<h3 id="AniamtionClip：动画片段（文件）"><a href="#AniamtionClip：动画片段（文件）" class="headerlink" title="AniamtionClip：动画片段（文件）"></a>AniamtionClip：动画片段（文件）</h3><p>动画片段，就是动画文件，记录了每一帧的信息，Unity内可以制作动画，但是从其他建模类软件导入的情况也比较多（尤其是3D动画）</p>
+<p>2D动画也分为帧动画和骨骼动画</p>
+<ol>
+<li><p>帧动画就是通过切换图片形成动画</p>
+</li>
+<li><p>而骨骼是通过旋转、缩放、移动关节点进行变化的动画</p>
+</li>
+</ol>
+<h3 id="动画事件"><a href="#动画事件" class="headerlink" title="动画事件"></a>动画事件</h3><p>1.在Animation窗口对AnimationClip添加事件</p>
+<p>2.选择Animator所在游戏物体的某个脚本函数（必须是公开方法）</p>
+<h2 id="常见组件"><a href="#常见组件" class="headerlink" title="常见组件"></a>常见组件</h2><h3 id="Transform组件"><a href="#Transform组件" class="headerlink" title="Transform组件"></a>Transform组件</h3><p>任何物体身上都有一个transform属性，代表所在的GameObject上的Transform组件。</p>
+<h2 id="2D物理系统"><a href="#2D物理系统" class="headerlink" title="2D物理系统"></a>2D物理系统</h2><h3 id="碰撞体"><a href="#碰撞体" class="headerlink" title="碰撞体"></a>碰撞体</h3><p>决定物理单位的形状，是矩形，还是圆形，或者说自定义的多边形</p>
+<h3 id="刚体"><a href="#刚体" class="headerlink" title="刚体"></a>刚体</h3><p>物理单位的物理特性，也就是定义物理单位怎样受到物理的控制，如重力等等</p>
+<h3 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h3><p>碰撞事件：当两个物理单位相撞时会调用的逻辑</p>
+<p>触发事件：当两个物理单位其中一个碰撞体设置为触发器时调用的逻辑</p>
+<h4 id="主要属性-1"><a href="#主要属性-1" class="headerlink" title="主要属性"></a>主要属性</h4><p>position：坐标</p>
+<p>rotation：旋转 四元数格式</p>
+<p>eulerAngles：旋转 欧拉角格式</p>
+<p>localScale：缩放</p>
+<p>其中position、eulerAngles、localScale都可用 <em>Vector3三维向量</em> 类型表示</p>
+<p>localPosition、localRotation、localEulerAngles：是相对父物体的坐标与旋转</p>
+<p>parent：父物体的transform</p>
+<p>childCount：子物体的数量</p>
+<p>root：自身的根节点(父的父的父到最上层)</p>
+<h4 id="主要行为-1"><a href="#主要行为-1" class="headerlink" title="主要行为"></a>主要行为</h4><p>GetChild：获取第X个子物体</p>
+<p>SetParent：设置自身为某个游戏物体的子物体</p>
+<p>Find：查找子物体，参数是路径，填写方式类似文件夹”A&#x2F;B&#x2F;C”</p>
+<p>Translate(Vector3 translation, Spave relativeTo)：移动</p>
+<p>其中translation为位移的量，relativeTo指基于什么坐标空间移动（World：世界坐标，Self：自身朝向）</p>
+<h3 id="SpriteRender"><a href="#SpriteRender" class="headerlink" title="SpriteRender"></a>SpriteRender</h3><h4 id="Sprite"><a href="#Sprite" class="headerlink" title="Sprite"></a>Sprite</h4><p>Sprite  “精灵图”  一词首次作为图形术语出现，是在德州仪器的9918(A)视频显示处理器上。使用“精灵图”作为术语，是因为精灵图并不是帧缓冲中位图数据的一部分，而是“悬浮”于帧缓冲中数据之上，不影响其中数据，就像精灵飘在上面一样。^^  </p>
+<p>在Unity中：png&#x2F;jpg等常规图片，一般不在Unity中直接使用，而是转为Sprite</p>
+<p>SpriteRender为用来渲染Sprite的渲染器</p>
+<table>
+<thead>
+<tr>
+<th><em><strong>属性</strong></em></th>
+<th><em><strong>功能</strong></em></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Sprite</strong></td>
+<td>定义该组件应渲染的精灵纹理。单击右侧的小圆点可打开对象选择器窗口，然后从可用精灵资源列表中进行选择。</td>
+</tr>
+<tr>
+<td><strong>Color</strong></td>
+<td>定义精灵的顶点颜色，用于对精灵的图像进行着色或重新着色。使用拾色器设置渲染的精灵纹理的顶点颜色。请参阅此表下方的<a target="_blank" rel="noopener" href="https://docs.unity3d.com/cn/current/Manual/class-SpriteRenderer.html#color">颜色</a>部分以查看示例。</td>
+</tr>
+<tr>
+<td><strong>Flip</strong></td>
+<td>沿选定的轴翻转精灵纹理。这不会翻转游戏对象的变换位置。</td>
+</tr>
+<tr>
+<td><strong>Sorting Layer</strong></td>
+<td>设置精灵的<a target="_blank" rel="noopener" href="https://docs.unity3d.com/Manual/class-TagManager.html">排序图层 (Sorting Layer)</a>，此图层用于控制渲染期间的精灵优先级。从下拉框中选择现有的排序图层，或创建新的排序图层。</td>
+</tr>
+<tr>
+<td><strong>Order In Layer</strong></td>
+<td>设置精灵在其<a target="_blank" rel="noopener" href="https://docs.unity3d.com/Manual/class-TagManager.html">排序图层</a>中的渲染优先级。首先渲染编号较低的精灵，编号较高的精灵叠加在前者之上。</td>
+</tr>
+<tr>
+<td><strong>Sprite Sort Point</strong></td>
+<td>在计算精灵和摄像机之间的距离时，在精灵中心 (Center) 或其轴心点 (Pivot Point) 之间进行选择。</td>
+</tr>
+</tbody></table>
+<p>注：scale中x值改为相反数等于x轴翻转</p>
+<h2 id="音频系统"><a href="#音频系统" class="headerlink" title="音频系统"></a>音频系统</h2><h3 id="AudioClip"><a href="#AudioClip" class="headerlink" title="AudioClip"></a>AudioClip</h3><p>常见的音频格式Unity都支持，在Unity内都被包装为AudioClip类型</p>
+<h3 id="AudioListener"><a href="#AudioListener" class="headerlink" title="AudioListener"></a>AudioListener</h3><p>没有任何可以设置属性的，其代表音频的接受者，也就是听见声音的地方，因为声音是可以有空间感的，所以这个组件一般在相机上，这样声音结合画面符合玩家的体验。</p>
+<h3 id="AudioSource"><a href="#AudioSource" class="headerlink" title="AudioSource"></a>AudioSource</h3><p>音频源头，也就是发生声音的组件</p>
+<ul>
+<li>Audio Clip：要播放的音频文件</li>
+<li>Mute：是否静音</li>
+<li>Play On Awake：在启动时是否立刻播放，如果禁用则脚本中使用Play()函数进行播放</li>
+<li>Loop：是否循环播放</li>
+<li>Volume：音量</li>
+<li>Spatial Blend：3D引擎对声音的影响，如果0则是完全的2D音效，1则是3D音效，也就是声音是否具有空间感。</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.jpg" alt="Yux1 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="Yux1 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag"><i class="fa fa-tag"></i> 学习笔记</a>
+              <a href="/tags/Unity/" rel="tag"><i class="fa fa-tag"></i> Unity</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/year/07/19/Yux1sJigsaw/" rel="prev" title="Yux1sJigsaw">
+                  <i class="fa fa-angle-left"></i> Yux1sJigsaw
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/year/07/30/Unity%E6%8A%80%E8%83%BD%E7%82%B9/" rel="next" title="Unity技能点">
+                  Unity技能点 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Yux1</span>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
